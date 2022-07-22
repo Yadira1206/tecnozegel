@@ -8235,7 +8235,7 @@ h1, h2, h3, h4, h5,
           color: #fff; } }
   .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu {
     border: none;
-    background: #000000;
+    background: white;
     -webkit-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
     -moz-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
     box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
@@ -8245,10 +8245,10 @@ h1, h2, h3, h4, h5,
     border-radius: 0; }
     .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item {
       font-size: 14px;
-      color: #fff; }
+      color: black; }
       .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:hover, .ftco-navbar-light .navbar-nav > .nav-item .dropdown-menu .dropdown-item:focus {
         background: transparent;
-        color: #dbcc8f; }
+        color: #8a2be2; }
   .ftco-navbar-light .navbar-nav > .nav-item.ftco-seperator {
     position: relative;
     margin-left: 20px;
@@ -8303,14 +8303,14 @@ h1, h2, h3, h4, h5,
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); }
     .ftco-navbar-light.scrolled .nav-item.active > a {
-      color: #dbcc8f !important; }
+      color: #8a2be2 !important; }
     .ftco-navbar-light.scrolled .nav-item.cta > a {
-      color: #000000 !important;
-      background: #dbcc8f;
+      color: white !important;
+      background: #8a2be2;
       border: none !important; }
       .ftco-navbar-light.scrolled .nav-item.cta > a span {
         display: inline-block;
-        color: #000000 !important; }
+        color: white !important; }
     .ftco-navbar-light.scrolled .nav-item.cta.cta-colored span {
       border-color: #dbcc8f; }
     .ftco-navbar-light.scrolled .nav-item .dropdown-menu {
@@ -8328,7 +8328,7 @@ h1, h2, h3, h4, h5,
         color: #000000; }
         .ftco-navbar-light.scrolled .nav-item .dropdown-menu .dropdown-item:hover, .ftco-navbar-light.scrolled .nav-item .dropdown-menu .dropdown-item:focus {
           background: transparent;
-          color: #dbcc8f; }
+          color: #8a2be2; }
       @media (max-width: 991.98px) {
         .ftco-navbar-light.scrolled .nav-item .dropdown-menu {
           -webkit-box-shadow: none;
@@ -8854,6 +8854,10 @@ h1, h2, h3, h4, h5,
     -moz-box-shadow: inset 0px 0px 101px 21px rgba(0, 0, 0, 0.09);
     box-shadow: inset 0px 0px 101px 21px rgba(0, 0, 0, 0.09);
     background: #fff;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1; }
     .product .img-prod .overlay {
       position: absolute;
@@ -9130,7 +9134,7 @@ h1, h2, h3, h4, h5,
       margin: 0 auto;
       border-style: solid;
       border-width: 10px 10px 0 10px;
-      border-color: #dbcc8f transparent transparent transparent;
+      border-color: #8a2be2 transparent transparent transparent;
       opacity: 0; }
     .nav-pills .nav-link span {
       display: block;
@@ -9139,7 +9143,7 @@ h1, h2, h3, h4, h5,
       .nav-pills .nav-link {
         width: 100%; } }
     .nav-pills .nav-link:hover {
-      background: #d5c37c;
+      background: #c29dff;
       color: #fff; }
     .nav-pills .nav-link.active {
       color: #fff;
@@ -9149,7 +9153,7 @@ h1, h2, h3, h4, h5,
       -ms-transition: all 0.3s ease;
       transition: all 0.3s ease;
       border: 1px solid transparent;
-      background: #dbcc8f; }
+      background: #8a2be2; }
       .nav-pills .nav-link.active:after {
         opacity: 1; }
       @media (max-width: 767.98px) {
@@ -9295,7 +9299,7 @@ h1, h2, h3, h4, h5,
     border: 1px solid transparent !important;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important; }
     .table tbody tr td.product-remove a {
-      background: #dbcc8f;
+      background: #c29dff;
       padding: 4px 10px;
       color: #000000;
       -webkit-border-radius: 2px;
@@ -9303,8 +9307,7 @@ h1, h2, h3, h4, h5,
       -ms-border-radius: 2px;
       border-radius: 2px; }
       .table tbody tr td.product-remove a:hover {
-        border: 1px solid #dbcc8f;
-        background: #dbcc8f; }
+        background: #8a2be2; }
         .table tbody tr td.product-remove a:hover span {
           color: #fff; }
     .table tbody tr td.quantity {
@@ -9324,7 +9327,7 @@ h1, h2, h3, h4, h5,
     .table tbody tr td.total, .table tbody tr td.price {
       color: #000000; }
 
-.cart-wrap .btn-primary {
+.cart-wrap .btn-primary, .cart-wrap .btn-lila {
   display: block;
   width: 100%; }
 
@@ -9655,7 +9658,7 @@ textarea.form-control {
     -webkit-transition: all 0.6s ease;
     -ms-transition: all 0.6s ease;
     transition: all 0.6s ease;
-    background: #dbcc8f;
+    background: #8a2be2;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -9704,7 +9707,7 @@ textarea.form-control {
     width: 50px;
     display: block;
     float: left;
-    background: #dbcc8f;
+    background: #8a2be2;
     border-radius: 50%;
     position: relative; }
     .ftco-footer-social li a span {
@@ -9883,7 +9886,7 @@ textarea.form-control {
       border-radius: 50%;
       background: rgba(0, 0, 0, 0.2); }
       .testimony-section .owl-dots .owl-dot.active {
-        background: #dbcc8f; }
+        background: #8a2be2; }
 
 .testimony-wrap {
   display: block;
@@ -9910,12 +9913,12 @@ textarea.form-control {
       -ms-border-radius: 50%;
       border-radius: 50%; }
       .testimony-wrap .user-img .quote i {
-        color: #dbcc8f; }
+        color: #8a2be2; }
   .testimony-wrap .name {
     font-weight: 600;
     font-size: 18px;
     margin-bottom: 0;
-    color: #dbcc8f; }
+    color: #8a2be2; }
   .testimony-wrap .position {
     font-size: 12px;
     font-weight: 400;
@@ -9935,7 +9938,7 @@ textarea.form-control {
       content: '';
       width: 3px;
       height: 30px;
-      background: #dbcc8f; }
+      background: #8a2be2; }
 
 @media (max-width: 767.98px) {
   .services-flow {
@@ -10670,3 +10673,46 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+
+.hero-portada-before {
+  position: relative;
+}
+
+.hero-portada-before::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  opacity: .6;
+}
+
+.bg-lila {
+  background-color: #c29dff;
+}
+
+.btn-lila {
+  background-color: #8a2be2;
+  color: white;
+}
+
+.btn-lila:hover {
+  background-color: transparent;
+  box-shadow: 0 0 0 2px #8a2be2 inset;
+  color: #8a2be2;
+}
+
+.btn-f-lila {
+  background-color: black;
+  color: white;
+}
+
+.btn-f-lila:hover {
+  background-color: #8a2be2;
+  color: white;
+}
+
+.thead-lila {
+  background-color: #8a2be2;
+  color: white;
+}
