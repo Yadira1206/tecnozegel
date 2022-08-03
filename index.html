@@ -25,13 +25,15 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/jquery.timepicker.css">
 
+	<link rel="stylesheet" href="sweetalert2/sweetalert2.min.css">
+
     
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="goto-here">
-		<div class="py-1 bg-black">
+	<div class="py-1 bg-black">
     	<div class="container">
     		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
 	    		<div class="col-lg-12 d-block">
@@ -50,7 +52,7 @@
 				    </div>
 			    </div>
 		    </div>
-		  </div>
+		</div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
@@ -78,7 +80,7 @@
 	        </ul>
 	      </div>
 	    </div>
-	  </nav>
+	</nav>
     <!-- END nav -->
 
     <section id="home-section" class="hero">
@@ -164,7 +166,7 @@
           </div>
         </div>
 			</div>
-		</section>
+	</section>
 
     <section class="ftco-section bg-light">
     	<div class="container">
@@ -175,7 +177,8 @@
           </div>
         </div>   		
     	</div>
-    	<div class="container">
+
+    	<div class="container" id="lista-productos">
     		<div class="row">
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product d-flex flex-column">
@@ -183,6 +186,7 @@
 							<span class="status">30% Off</span>
     						<div class="overlay"></div>
     					</a>
+
     					<div class="text py-3 pb-4 px-3">
     						<div class="d-flex">
     							<div class="cat">
@@ -200,15 +204,17 @@
 	    					</div>
     						<h3><a href="#">Apple Watch Series 6 (GPS, 40 mm) - Caja de aluminio dorado con correa deportiva Pink </a></h3>
     						<div class="pricing">
-	    						<p class="price"><span>$1,899</span></p>
+	    						<p class="price"><span class="price-sale">1,899</span></p>
 	    					</div>
 	    					<p class="bottom-area d-flex px-3">
-    							<a href="checkout.html" class="add-to-cart text-center py-2 mr-1"><span>COMPRAR<i class="ion-ios-add ml-1"></i></span></a>
-    							<a href="#" class="buy-now text-center py-2">AÑADIR<span><i class="ion-ios-cart ml-1"></i></span></a>
+    							<a href="#" class="add-to-cart text-center py-2 mr-1 procesar-pedido"><span>COMPRAR<i class="ion-ios-add ml-1"></i></span></a>
+								
+    							<a href="#" class="buy-now text-center py-2 agregar-carrito" data-id="1">AÑADIR<span><i class="ion-ios-cart ml-1"></i></span></a>
     						</p>
     					</div>
     				</div>
     			</div>
+				
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product d-flex flex-column">
     					<a href="#" class="img-prod"><img class="img-fluid" src="images/img7-removebg-preview.png" alt="Colorlib Template">
@@ -235,12 +241,14 @@
 	    						<p class="price"><span class="mr-2 price-dc">$428</span><span class="price-sale">$350.00</span></p>
 	    					</div>
 	    					<p class="bottom-area d-flex px-3">
-    							<a href="checkout.html" class="add-to-cart text-center py-2 mr-1"><span>COMPRAR<i class="ion-ios-add ml-1"></i></span></a>
-    							<a href="#" class="buy-now text-center py-2">AÑADIR<span><i class="ion-ios-cart ml-1"></i></span></a>
+    							<a href="checkout.html" class="add-to-cart text-center py-2 mr-1 procesar-pedido"><span>COMPRAR<i class="ion-ios-add ml-1"></i></span></a>
+
+    							<a href="#" class="buy-now text-center py-2 agregar-carrito" data-id="2">AÑADIR<span><i class="ion-ios-cart ml-1"></i></span></a>
     						</p>
     					</div>
     				</div>
     			</div>
+
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product">
     					<a href="#" class="img-prod"><img class="img-fluid" src="images/img3-removebg-preview.png" alt="Colorlib Template">
@@ -267,12 +275,14 @@
 								<p class="price"><span class="mr-2 price-dc">$10,189.00</span><span class="price-sale">$8,039.00</span></p>
 	    					</div>
 	    					<p class="bottom-area d-flex px-3">
-    							<a href="checkout.html" class="add-to-cart text-center py-2 mr-1"><span>COMPRAR<i class="ion-ios-add ml-1"></i></span></a>
-    							<a href="#" class="buy-now text-center py-2">AÑADIR<span><i class="ion-ios-cart ml-1"></i></span></a>
+    							<a href="checkout.html" class="add-to-cart text-center py-2 mr-1 procesar-pedido"><span>COMPRAR<i class="ion-ios-add ml-1"></i></span></a>
+
+    							<a href="#" class="buy-now text-center py-2 agregar-carrito" data-id="3">AÑADIR<span><i class="ion-ios-cart ml-1"></i></span></a>
     						</p>
     					</div>
     				</div>
     			</div>
+
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product">
     					<a href="#" class="img-prod"><img class="img-fluid" src="images/cel004-removebg-preview.png" alt="Colorlib Template">
@@ -299,8 +309,9 @@
 								<p class="price"><span class="mr-2 price-dc">$2,850.00</span><span class="price-sale">$2,159.00</span></p>
 	    					</div>
 	    					<p class="bottom-area d-flex px-3">
-    							<a href="checkout.html" class="add-to-cart text-center py-2 mr-1"><span>COMPRAR<i class="ion-ios-add ml-1"></i></span></a>
-    							<a href="#" class="buy-now text-center py-2">AÑADIR<span><i class="ion-ios-cart ml-1"></i></span></a>
+    							<a href="checkout.html" class="add-to-cart text-center py-2 mr-1 procesar-pedido"><span>COMPRAR<i class="ion-ios-add ml-1"></i></span></a>
+
+    							<a href="#" class="buy-now text-center py-2 agregar-carrito" data-id="4">AÑADIR<span><i class="ion-ios-cart ml-1"></i></span></a>
     						</p>
     					</div>
     				</div>
@@ -329,15 +340,17 @@
 	    					</div>
     						<h3><a href="#">Samsung Z Flip 3 5G 256GB 8GB <br>Alto:10, Ancho: 20, Cámara frontal: 10MP, Cámara principal: 24MP</a></h3>
     						<div class="pricing">
-	    						<p class="price"><span>$120.00</span></p>
+	    						<p class="price"><span class="price-sale">$120.00</span></p>
 	    					</div>
 	    					<p class="bottom-area d-flex px-3">
-    							<a href="checkout.html" class="add-to-cart text-center py-2 mr-1"><span>COMPRAR<i class="ion-ios-add ml-1"></i></span></a>
-    							<a href="#" class="buy-now text-center py-2">AÑADIR<span><i class="ion-ios-cart ml-1"></i></span></a>
+    							<a href="checkout.html" class="add-to-cart text-center py-2 mr-1 procesar-pedido"><span>COMPRAR<i class="ion-ios-add ml-1"></i></span></a>
+
+    							<a href="#" class="buy-now text-center py-2 agregar-carrito" data-id="5">AÑADIR<span><i class="ion-ios-cart ml-1"></i></span></a>
     						</p>
     					</div>
     				</div>
     			</div>
+
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product d-flex flex-column">
     					<a href="#" class="img-prod"><img class="img-fluid" src="images/img12-removebg-preview.png" alt="Colorlib Template">
@@ -364,12 +377,14 @@
 	    						<p class="price"><span class="mr-2 price-dc">$230.00</span><span class="price-sale">$195.00</span></p>
 	    					</div>
 	    					<p class="bottom-area d-flex px-3">
-    							<a href="checkout.html" class="add-to-cart text-center py-2 mr-1"><span>COMPRAR<i class="ion-ios-add ml-1"></i></span></a>
-    							<a href="#" class="buy-now text-center py-2">AÑADIR<span><i class="ion-ios-cart ml-1"></i></span></a>
+    							<a href="checkout.html" class="add-to-cart text-center py-2 mr-1 procesar-pedido"><span>COMPRAR<i class="ion-ios-add ml-1"></i></span></a>
+
+    							<a href="#" class="buy-now text-center py-2 agregar-carrito" data-id="6">AÑADIR<span><i class="ion-ios-cart ml-1"></i></span></a>
     						</p>
     					</div>
     				</div>
     			</div>
+
     			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product">
     					<a href="#" class="img-prod"><img class="img-fluid" src="images/img17-removebg-preview.png" alt="Colorlib Template">
@@ -396,13 +411,15 @@
 	    						<p class="price"><span class="mr-2 price-dc">$199.00</span><span class="price-sale">$129.00</span></p>
 	    					</div>
 	    					<p class="bottom-area d-flex px-3">
-    							<a href="checkout.html" class="add-to-cart text-center py-2 mr-1"><span>COMPRAR<i class="ion-ios-add ml-1"></i></span></a>
-    							<a href="#" class="buy-now text-center py-2">AÑADIR<span><i class="ion-ios-cart ml-1"></i></span></a>
+    							<a href="checkout.html" class="add-to-cart text-center py-2 mr-1 procesar-pedido"><span>COMPRAR<i class="ion-ios-add ml-1"></i></span></a>
+
+    							<a href="#" class="buy-now text-center py-2 agregar-carrito " data-id="7">AÑADIR<span><i class="ion-ios-cart ml-1"></i></span></a>
     						</p>
     					</div>
     				</div>
     			</div>
-    			<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
+    			
+				<div class="col-sm-12 col-md-6 col-lg-3 ftco-animate d-flex">
     				<div class="product">
     					<a href="#" class="img-prod"><img class="img-fluid" src="images/img1-removebg-preview.png" alt="Colorlib Template">
 							<span class="status">30% Off</span>
@@ -429,8 +446,9 @@
 	    						<p class="price"><span class="mr-2 price-dc">$2,599.00</span><span class="price-sale">$1,999.00</span></p>
 	    					</div>
 	    					<p class="bottom-area d-flex px-3">
-    							<a href="checkout.html" class="add-to-cart text-center py-2 mr-1"><span>COMPRAR<i class="ion-ios-add ml-1"></i></span></a>
-    							<a href="#" class="buy-now text-center py-2">AÑADIR<span><i class="ion-ios-cart ml-1"></i></span></a>
+    							<a href="checkout.html" class="add-to-cart text-center py-2 mr-1 procesar-pedido"><span>COMPRAR<i class="ion-ios-add ml-1"></i></span></a>
+
+    							<a href="#" class="buy-now text-center py-2 agregar-carrito" data-id="8">AÑADIR<span><i class="ion-ios-cart ml-1"></i></span></a>
     						</p>
     					</div>
     				</div>
@@ -799,22 +817,28 @@
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-migrate-3.0.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/aos.js"></script>
+	<script src="js/jquery.animateNumber.min.js"></script>
+	<script src="js/bootstrap-datepicker.js"></script>
+	<script src="js/scrollax.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  	<script src="js/google-map.js"></script>
+  	<script src="js/main.js"></script>
+
+	<script src="sweetalert2/sweetalert2.all.min.js"></script>
+	<script src="sweetalert2/sweetalert2.min.js"></script>
+
+  	<script src="js/carrito.js"></script>
+  	<script src="js/pedido.js"></script>
     
-  </body>
+</body>
 </html>

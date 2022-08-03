@@ -10716,3 +10716,33 @@ textarea.form-control {
   background-color: #8a2be2;
   color: white;
 }
+
+.img-product {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.btn_close_product {
+  background: #c29dff;
+  padding: 0 10px !important;
+  color: #000000;
+  border-radius: 2px;
+  transition: all .3s ease;
+
+  outline: none;
+  border-style: none;
+  cursor: pointer;
+}
+
+.btn_close_product .ion-ios-close {
+  font-size: 17px;
+}
+
+.btn_close_product:hover {
+  background: #8a2be2;
+}
+
+.btn_close_product:hover .ion-ios-close {
+  color: white;
+}
