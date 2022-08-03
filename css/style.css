@@ -9413,7 +9413,7 @@ h1, h2, h3, h4, h5,
     /* Firefox 18- */
     color: rgba(0, 0, 0, 0.4); }
   .billing-form .form-control:focus, .billing-form .form-control:active {
-    border-color: #dbcc8f !important; }
+    border-color: #8a2be2 !important; }
 
 .billing-form textarea.form-control {
   height: inherit !important; }
@@ -10745,4 +10745,29 @@ textarea.form-control {
 
 .btn_close_product:hover .ion-ios-close {
   color: white;
+}
+
+.cont_enviado_pedido {
+  display: none;
+  padding: 18px 16px;
+  background-image: linear-gradient(#eeddff, #eeddff);
+  box-shadow: 0 0 0 1px rgba(169, 84, 255, .4) inset;
+  font-size: 14px;
+  color: #8a2be2;
+}
+
+.cont_enviado_pedido.loading {
+  background-image: linear-gradient(#ddf4ff, #ddf4ff);
+  box-shadow: 0 0 0 1px rgba(84, 174, 255, .4) inset;
+  color: #0969da;
+}
+
+.cont_enviado_pedido.error {
+  background-image: linear-gradient(#ffdddd, #ffdddd);
+  box-shadow: 0 0 0 1px rgba(255, 84, 84, .4) inset;
+  color: red;
+}
+
+.mr-b21 {
+  margin-bottom: 21px;
 }

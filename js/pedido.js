@@ -1,11 +1,11 @@
 let carro = new Carrito();
-let productos = document.getElementById("lista-productos");
+let productos = $(".lista-productos");
 let procesarPedidobtn = $(".procesar-pedido");
 
 cargarEventos();
 function cargarEventos() {
-    productos.addEventListener("click", (e) => {
-        carro.comprarProducto(e);
+    $(productos).on("click", function(e) {
+        carro.comprarProducto(e)
     });
 
     document.addEventListener("DOMContentLoaded", carro.leerLocalStorage());
@@ -13,4 +13,6 @@ function cargarEventos() {
     $(procesarPedidobtn).on("click", function(e) {
         carro.procesarPedido(e);
     });
+
+    carro.calcularTotal();
 }

@@ -11,8 +11,9 @@ class Carrito {
     leerDatosProductos(producto) {
         let infoProducto = {
             imagen : producto.querySelector("img").src,
+            marca : producto.querySelector(".cat span").textContent,
             titulo : producto.querySelector("h3").textContent,
-            precio : producto.querySelector(".price-sale"),
+            precio : producto.querySelector(".price-sale").textContent,
             id : producto.querySelector(".agregar-carrito").getAttribute("data-id"),
             cantidad : 1
         }
@@ -37,14 +38,16 @@ class Carrito {
             });
         } else {
             this.insertarCarrito(infoProducto);
+            this.calcularTotal();
         }
     }
 
     insertarCarrito(producto) {
-        console.log(producto.imagen);
-        console.log(producto.titulo);
-        console.log(producto.precio);
-        console.log(producto.id);
+        // console.log(producto.imagen);
+        // console.log(producto.marca);
+        // console.log(producto.titulo);
+        // console.log(producto.precio);
+        // console.log(producto.id);
 
         this.guardarProductosLocalStorage(producto);
     }
@@ -62,6 +65,7 @@ class Carrito {
         }
 
         this.eliminarProductoLocalStorage(productoID);
+        this.calcularTotal();
     }
 
     guardarProductosLocalStorage(producto) {
@@ -122,7 +126,7 @@ class Carrito {
                 </td>
     
                 <td class="product-name">
-                    <h3>XIOMI</h3>
+                    <h3>${producto.marca}</h3>
                     <p>${producto.titulo}</p>
                 </td>
     
@@ -130,7 +134,7 @@ class Carrito {
     
                 <td class="quantity">
                     <div class="input-group mb-3">
-                        <input type="text" name="quantity" class="quantity form-control input-number" value="${producto.cantidad}" min="1" max="100">
+                        <input type="number" name="quantity" class="quantity form-control input-number" value="${producto.cantidad}" min="1" max="100">
                     </div>
                 </td>
     
@@ -167,8 +171,10 @@ class Carrito {
         igv = parseFloat(total * 0.18).toFixed(2);
         subtotal = parseFloat(total - igv).toFixed(2);
 
-        document.getElementById("subtotal").innerHTML = "S/. " + subtotal;
-        document.getElementById("igv").innerHTML = "S/. " + igv;
-        document.getElementById("total").innerHTML = "S/. " + total.toFixed(2);
+        $(".subtotal_cr").html("S/. " + subtotal);
+        $(".igv_cr").html("S/. " + igv);
+        $(".total_cr").html("S/. " + total.toFixed(2));
+
+        $(".js__showCantProductCart").html(productoLS.length);
     }
 }
